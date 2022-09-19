@@ -3,9 +3,7 @@ public class Cell {
     private int value;
     private boolean isFlagged = false;
 
-    public Cell(int value){
-        this.value = value;
-    }
+    public Cell(){}
 
     public void setFlagged(boolean flagged) {
         isFlagged = flagged;
