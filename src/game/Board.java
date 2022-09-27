@@ -18,7 +18,7 @@ public class Board extends JPanel implements MouseListener {
     private final int numberOfBombs = 10;
     private final Cell[][] hiddenBoard;
     private final Cell[][] displayedBoard;
-    private final int maxCellSize = 15;
+    private final int minCellSize = 15;
     private final int cellSize;
     private int numberOfDugSpots;
     private final ImageManager iM;
@@ -28,7 +28,7 @@ public class Board extends JPanel implements MouseListener {
         this.numberOfCol = numberOfCol;
         this.numberOfRows = numberOfRows;
 
-        this.cellSize = Math.max(preferredScreenSize / Math.max(numberOfCol, numberOfRows), maxCellSize);
+        this.cellSize = Math.max(preferredScreenSize / Math.max(numberOfCol, numberOfRows), minCellSize);
 
         screenWidth = cellSize * numberOfCol;
         screenHeight = cellSize * numberOfRows;
@@ -87,16 +87,13 @@ public class Board extends JPanel implements MouseListener {
 
     private void dig(int row, int column) {
 
-        if (displayedBoard[row][column].isDug || displayedBoard[row][column].isFlagged())
+        if (displayedBoard[row][column].isDug() || displayedBoard[row][column].isFlagged())
             return;
         else {
             displayedBoard[row][column] = hiddenBoard[row][column];
             displayedBoard[row][column].setDug();
             numberOfDugSpots++;
         }
-
-        System.out.println(numberOfDugSpots);
-        System.out.println(row + " " + column + " " + (displayedBoard[row][column].getValue()) + " " + displayedBoard[row][column].isDug);
 
         if (hiddenBoard[row][column].getValue() == 0)
             digSurroundings(row, column);
@@ -108,7 +105,7 @@ public class Board extends JPanel implements MouseListener {
     private void digSurroundings(int row, int column) {
         for (int r = Math.max(0, row - 1); r < Math.min(numberOfRows, row + 2); r++)
             for (int c = Math.max(0, column - 1); c < Math.min(numberOfCol, column + 2); c++) {
-                if (r == row && c == column)// || displayedBoard[r][c].isDug
+                if (r == row && c == column)// || displayedBoard[r][c].isDug()
                     continue;
                 dig(r, c);
             }
@@ -134,19 +131,19 @@ public class Board extends JPanel implements MouseListener {
                 Cell currentCell = displayedBoard[row][col];
 
                 if (currentCell.isFlagged())
-                    iM.drawFlag(g2, row, col);
-                else if (currentCell.isDug) {
+                    iM.drawFlag(g2, col, row);
+                else if (currentCell.isDug()) {
                     g2.setColor(Color.darkGray);
-                    g2.fillRect(cellSize * row, cellSize * col, cellSize, cellSize);
+                    g2.fillRect(cellSize * col, cellSize * row, cellSize, cellSize);
                 }
 
                 if (currentCell.getValue() == 9)
-                    iM.drawBomb(g2, row, col);
+                    iM.drawBomb(g2, col, row);
                 else if (currentCell.getValue() != 0)
-                    iM.drawNumber(g2, row, col, getNumberOfSurroundingBombs(row, col));
+                    iM.drawNumber(g2, col, row, getNumberOfSurroundingBombs(row, col));
 
                 g2.setColor(Color.black);
-                g2.drawRect(cellSize * row, cellSize * col, cellSize, cellSize);
+                g2.drawRect(cellSize * col, cellSize * row, cellSize, cellSize);
             }
         }
         if (gameOver)
@@ -195,12 +192,12 @@ public class Board extends JPanel implements MouseListener {
         int y = getCellY(e);
 
         if (e.getButton() == MouseEvent.BUTTON1) {
-            dig(x, y);
+            dig(y, x);
         }
         if (e.getButton() == MouseEvent.BUTTON2)
             System.out.println("middle");
-        if (e.getButton() == MouseEvent.BUTTON3 && !displayedBoard[x][y].isDug) {
-            displayedBoard[x][y].setFlag();
+        if (e.getButton() == MouseEvent.BUTTON3 && !displayedBoard[y][x].isDug()) {
+            displayedBoard[y][x].setFlag();
         }
 
         repaint();

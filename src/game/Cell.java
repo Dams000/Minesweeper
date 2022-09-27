@@ -29,8 +29,4 @@ public class Cell {
     }
 
     public boolean isDug(){ return isDug;}
-
-    public boolean equals(Cell cell) {
-        return this.getValue() == cell.getValue();
-    }
 }
