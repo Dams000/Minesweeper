@@ -16,6 +16,13 @@ public class ImageManager {
     int offSetY;
     Image[] images;
 
+    public ImageManager() {
+        imageSize = 200;
+        images = new Image[10];
+        cellSize = 1;
+        getImage();
+    }
+
     public ImageManager(Board b) {
         this.b = b;
         cellSize = b.getCellSize();
@@ -73,5 +80,8 @@ public class ImageManager {
 
     public void drawNumber(Graphics2D g2, int x, int y, int number) {
         g2.drawImage(images[number].image, x * cellSize + offSetX, y * cellSize + offSetY, imageSize, imageSize, null);
+    }
+
+    public static void drawBomb(Graphics2D g2, int x, int y, int width, int height) {
     }
 }

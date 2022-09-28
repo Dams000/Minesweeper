@@ -1,5 +1,7 @@
 package game;
 
+import minesweeperImages.ImageManager;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -87,6 +89,9 @@ public class StartUpForm extends JFrame {
         startBtnCustom.setBackground(Color.LIGHT_GRAY);
         startBtnCustom.setFocusable(false);
         contentPane.add(startBtnCustom);
+
+//        ImageManager im = new ImageManager();
+//        im.drawBomb((Graphics2D) getGraphics(), 200, 50);
 
         setLocationRelativeTo(null);
     }

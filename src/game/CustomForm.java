@@ -27,6 +27,20 @@ public class CustomForm extends JFrame implements ChangeListener {
         contentPane.setLayout(null);
         contentPane.setBackground(Color.GRAY);
 
+        JButton returnBtn = new JButton("Back");
+        returnBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                Minesweeper.showStartUp();
+            }
+        });
+        returnBtn.setFont(font);
+        returnBtn.setBounds(20, 20, 100, 20);
+        returnBtn.setBackground(Color.LIGHT_GRAY);
+        returnBtn.setFocusable(false);
+        contentPane.add(returnBtn);
+
         sliderRows = new JSlider(10, 50);
         sliderRows.setOrientation(SwingConstants.VERTICAL);
         sliderRows.setPaintTicks(true);
@@ -89,6 +103,7 @@ public class CustomForm extends JFrame implements ChangeListener {
         startBtn.setBackground(Color.LIGHT_GRAY);
         startBtn.setFocusable(false);
         contentPane.add(startBtn);
+
         setLocationRelativeTo(null);
     }
 
