@@ -15,7 +15,7 @@ public class Board extends JPanel implements MouseListener {
     private final int screenHeight;
     private final int numberOfCol;
     private final int numberOfRows;
-    private final int numberOfBombs = 10;
+    private final int numberOfBombs;
     private final Cell[][] hiddenBoard;
     private final Cell[][] displayedBoard;
     private final int minCellSize = 15;
@@ -24,9 +24,10 @@ public class Board extends JPanel implements MouseListener {
     private final ImageManager iM;
     private boolean gameOver;
 
-    public Board(int numberOfCol, int numberOfRows) {
+    public Board(int numberOfCol, int numberOfRows, int numberOfBombs) {
         this.numberOfCol = numberOfCol;
         this.numberOfRows = numberOfRows;
+        this.numberOfBombs = numberOfBombs;
 
         this.cellSize = Math.max(preferredScreenSize / Math.max(numberOfCol, numberOfRows), minCellSize);
 
@@ -160,8 +161,6 @@ public class Board extends JPanel implements MouseListener {
         FontMetrics metrics = g2.getFontMetrics(font);
         String text = "GAME OVER";
 
-        this.removeMouseListener(this);
-
         int x = (screenWidth - metrics.stringWidth(text)) / 2;
         int y = screenHeight / 4;
 
@@ -174,8 +173,6 @@ public class Board extends JPanel implements MouseListener {
         Font font = new Font("Times New Roman", Font.BOLD, 36);
         FontMetrics metrics = g2.getFontMetrics(font);
         String text = "YOU WON ! :)";
-
-        this.removeMouseListener(this);
 
         int x = (screenWidth - metrics.stringWidth(text)) / 2;
         int y = screenHeight / 4;
@@ -192,6 +189,8 @@ public class Board extends JPanel implements MouseListener {
         int y = getCellY(e);
 
         if (e.getButton() == MouseEvent.BUTTON1) {
+            if (gameOver || isWinner())
+                Minesweeper.gameOver();
             dig(y, x);
         }
         if (e.getButton() == MouseEvent.BUTTON2)

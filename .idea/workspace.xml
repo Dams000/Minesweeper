@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c43d2db0-90bb-4dae-a1b8-7025b8f19771" name="Changes" comment="forgot to commit and push lol">
+    <list default="true" id="c43d2db0-90bb-4dae-a1b8-7025b8f19771" name="Changes" comment="fixed a few errors and solved the paint problem">
+      <change afterPath="$PROJECT_DIR$/src/game/CustomForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/GameForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/Minesweeper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/StartUpForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/minesweeperImages/ImageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minesweeperImages/ImageManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,11 +58,27 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="game" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\damie\OneDrive\Bureau\Programming\Project (Intellij)\Minesweeper\src\images" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Minesweeper">
+    <configuration name="GameForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="game.GameForm" />
+      <module name="Minesweeper" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="game.Main" />
       <module name="Minesweeper" />
@@ -68,8 +86,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Minesweeper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="game.Minesweeper" />
+      <module name="Minesweeper" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Minesweeper" />
+        <item itemvalue="Application.GameForm" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -89,7 +122,11 @@
       <workItem from="1664014808593" duration="3471000" />
       <workItem from="1664097337308" duration="8710000" />
       <workItem from="1664203320082" duration="4957000" />
-      <workItem from="1664279043337" duration="1775000" />
+      <workItem from="1664279043337" duration="4018000" />
+      <workItem from="1664293847131" duration="438000" />
+      <workItem from="1664301259806" duration="3896000" />
+      <workItem from="1664353185578" duration="4152000" />
+      <workItem from="1664362028195" duration="1015000" />
     </task>
     <task id="LOCAL-00001" summary="created Board, Cell and did a test case in Main to test initBoard and plantBombs.">
       <created>1663590399683</created>
@@ -119,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664280291865</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed a few errors and solved the paint problem">
+      <created>1664280928770</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664280928770</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +184,8 @@
     <MESSAGE value="created Board, Cell and did a test case in Main to test initBoard and plantBombs." />
     <MESSAGE value="trying to understand how commits and pushs work &#10;did some changes and added digs" />
     <MESSAGE value="forgot to commit and push lol" />
-    <option name="LAST_COMMIT_MESSAGE" value="forgot to commit and push lol" />
+    <MESSAGE value="fixed a few errors and solved the paint problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed a few errors and solved the paint problem" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
