@@ -196,19 +196,21 @@ public class Board extends JPanel implements MouseListener {
 
         int x = getCellX(e);
         int y = getCellY(e);
+        
+        Cell currentCell = displayedBoard[y][x];
 
         if (e.getButton() == MouseEvent.BUTTON1) {
             if (gameOver || isWinner())
                 Minesweeper.gameOver();
-            else if (displayedBoard[y][x].isDug() && numberOfSurroundingFlaggedCells(y, x) == displayedBoard[y][x].getValue()) {
+            else if (currentCell.isDug() && numberOfSurroundingFlaggedCells(y, x) == currentCell.getValue()) {
                 digSurroundings(y, x);
             }else
                 dig(y, x);
         }
         if (e.getButton() == MouseEvent.BUTTON2)
             System.out.println("middle");
-        if (e.getButton() == MouseEvent.BUTTON3 && !displayedBoard[y][x].isDug()) {
-            displayedBoard[y][x].setFlag();
+        if (e.getButton() == MouseEvent.BUTTON3 && !currentCell.isDug()) {
+            currentCell.setFlag();
         }
 
         repaint();

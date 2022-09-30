@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c43d2db0-90bb-4dae-a1b8-7025b8f19771" name="Changes" comment="hi">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c43d2db0-90bb-4dae-a1b8-7025b8f19771" name="Changes" comment="added clicking on numbers to dig surroundings">
       <change beforePath="$PROJECT_DIR$/src/game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Board.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +121,7 @@
       <workItem from="1664301259806" duration="3896000" />
       <workItem from="1664353185578" duration="4152000" />
       <workItem from="1664362028195" duration="2445000" />
-      <workItem from="1664568014436" duration="3044000" />
+      <workItem from="1664568014436" duration="3382000" />
     </task>
     <task id="LOCAL-00001" summary="created Board, Cell and did a test case in Main to test initBoard and plantBombs.">
       <created>1663590399683</created>
@@ -180,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664570570386</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added clicking on numbers to dig surroundings">
+      <created>1664571226451</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664571226451</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +210,8 @@
     <MESSAGE value="fixed a few errors and solved the paint problem" />
     <MESSAGE value="menu, game modes and custom" />
     <MESSAGE value="hi" />
-    <option name="LAST_COMMIT_MESSAGE" value="hi" />
+    <MESSAGE value="added clicking on numbers to dig surroundings" />
+    <option name="LAST_COMMIT_MESSAGE" value="added clicking on numbers to dig surroundings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
