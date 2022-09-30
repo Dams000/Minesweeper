@@ -17,9 +17,7 @@ public class ImageManager {
     Image[] images;
 
     public ImageManager() {
-        imageSize = 200;
         images = new Image[10];
-        cellSize = 1;
         getImage();
     }
 
@@ -82,6 +80,7 @@ public class ImageManager {
         g2.drawImage(images[number].image, x * cellSize + offSetX, y * cellSize + offSetY, imageSize, imageSize, null);
     }
 
-    public static void drawBomb(Graphics2D g2, int x, int y, int width, int height) {
+    public Image getBomb() {
+        return images[9];
     }
 }

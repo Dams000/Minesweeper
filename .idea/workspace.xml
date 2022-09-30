@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c43d2db0-90bb-4dae-a1b8-7025b8f19771" name="Changes" comment="menu, game modes and custom">
+    <list default="true" id="c43d2db0-90bb-4dae-a1b8-7025b8f19771" name="Changes" comment="hi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/CustomForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/CustomForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/StartUpForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/StartUpForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/minesweeperImages/ImageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/minesweeperImages/ImageManager.java" afterDir="false" />
     </list>
@@ -124,7 +123,8 @@
       <workItem from="1664293847131" duration="438000" />
       <workItem from="1664301259806" duration="3896000" />
       <workItem from="1664353185578" duration="4152000" />
-      <workItem from="1664362028195" duration="2356000" />
+      <workItem from="1664362028195" duration="2445000" />
+      <workItem from="1664568014436" duration="2316000" />
     </task>
     <task id="LOCAL-00001" summary="created Board, Cell and did a test case in Main to test initBoard and plantBombs.">
       <created>1663590399683</created>
@@ -168,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664363391524</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="hi">
+      <created>1664364458552</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664364458552</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +198,8 @@
     <MESSAGE value="forgot to commit and push lol" />
     <MESSAGE value="fixed a few errors and solved the paint problem" />
     <MESSAGE value="menu, game modes and custom" />
-    <option name="LAST_COMMIT_MESSAGE" value="menu, game modes and custom" />
+    <MESSAGE value="hi" />
+    <option name="LAST_COMMIT_MESSAGE" value="hi" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

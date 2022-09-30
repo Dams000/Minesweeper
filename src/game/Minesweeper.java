@@ -39,17 +39,13 @@ public class Minesweeper {
     }
 
     public static void main(String[] args) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(() -> {
 
-            @Override
-            public void run() {
+            sf = new StartUpForm();
+            cf = new CustomForm();
 
-                sf = new StartUpForm();
-                cf = new CustomForm();
+            sf.setVisible(true);
 
-                sf.setVisible(true);
-
-            }
         });
 
     }
