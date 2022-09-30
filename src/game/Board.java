@@ -86,6 +86,15 @@ public class Board extends JPanel implements MouseListener {
         return numberOfSurroundingBombs;
     }
 
+    private int numberOfSurroundingFlaggedCells(int row, int column) {
+        int numberOfSurroundingFlags = 0;
+        for (int r = Math.max(0, row - 1); r < Math.min(numberOfRows, row + 2); r++)
+            for (int c = Math.max(0, column - 1); c < Math.min(numberOfCol, column + 2); c++)
+                if (displayedBoard[r][c].isFlagged())
+                    numberOfSurroundingFlags++;
+        return numberOfSurroundingFlags;
+    }
+
     private void dig(int row, int column) {
 
         if (displayedBoard[row][column].isDug() || displayedBoard[row][column].isFlagged())
@@ -191,7 +200,10 @@ public class Board extends JPanel implements MouseListener {
         if (e.getButton() == MouseEvent.BUTTON1) {
             if (gameOver || isWinner())
                 Minesweeper.gameOver();
-            dig(y, x);
+            else if (displayedBoard[y][x].isDug() && numberOfSurroundingFlaggedCells(y, x) == displayedBoard[y][x].getValue()) {
+                digSurroundings(y, x);
+            }else
+                dig(y, x);
         }
         if (e.getButton() == MouseEvent.BUTTON2)
             System.out.println("middle");
