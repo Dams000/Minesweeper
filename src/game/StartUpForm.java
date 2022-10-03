@@ -5,17 +5,6 @@ import java.awt.*;
 
 public class StartUpForm extends JFrame {
 
-    public static void main(String[] args) {
-        EventQueue.invokeLater(() -> {
-            try {
-                StartUpForm frame = new StartUpForm();
-                frame.setVisible(true);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
-    }
-
     public StartUpForm() {
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -25,6 +14,12 @@ public class StartUpForm extends JFrame {
         setContentPane(contentPane);
         contentPane.setLayout(null);
         contentPane.setBackground(Color.BLACK);
+
+        JLabel title = new JLabel("MINESWEEPER");
+        title.setBounds(100, 100, 400, 50);
+        title.setForeground(Color.white);
+        title.setFont(new Font("ZX Spectrum", Font.BOLD, 50));
+        contentPane.add(title);
 
         JButton startBtnEasy = new JButton("Easy");
         startBtnEasy.addActionListener(e -> {

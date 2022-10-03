@@ -166,7 +166,7 @@ public class Board extends JPanel implements MouseListener {
     }
 
     private void gameOver(Graphics2D g2) {
-        Font font = new Font("Times New Roman", Font.BOLD, 36);
+        Font font = new Font("Times New Roman", Font.BOLD, 50);
         FontMetrics metrics = g2.getFontMetrics(font);
         String text = "GAME OVER";
 
@@ -179,7 +179,7 @@ public class Board extends JPanel implements MouseListener {
     }
 
     private void win(Graphics2D g2) {
-        Font font = new Font("Times New Roman", Font.BOLD, 36);
+        Font font = new Font("Times New Roman", Font.BOLD, 50);
         FontMetrics metrics = g2.getFontMetrics(font);
         String text = "YOU WON ! :)";
 
@@ -202,7 +202,7 @@ public class Board extends JPanel implements MouseListener {
         if (e.getButton() == MouseEvent.BUTTON1) {
             if (gameOver || isWinner())
                 Minesweeper.gameOver();
-            else if (currentCell.isDug() && numberOfSurroundingFlaggedCells(y, x) == currentCell.getValue()) {
+            else if (currentCell.isDug() && numberOfSurroundingFlaggedCells(y, x) >= currentCell.getValue()) {
                 digSurroundings(y, x);
             }else
                 dig(y, x);

@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c43d2db0-90bb-4dae-a1b8-7025b8f19771" name="Changes" comment="added clicking on numbers to dig surroundings">
+    <list default="true" id="c43d2db0-90bb-4dae-a1b8-7025b8f19771" name="Changes" comment="h">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Minesweeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Minesweeper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/StartUpForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/StartUpForm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +53,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -128,6 +128,7 @@
       <workItem from="1664362028195" duration="2445000" />
       <workItem from="1664568014436" duration="4369000" />
       <workItem from="1664797385488" duration="433000" />
+      <workItem from="1664797872546" duration="1596000" />
     </task>
     <task id="LOCAL-00001" summary="created Board, Cell and did a test case in Main to test initBoard and plantBombs.">
       <created>1663590399683</created>
@@ -199,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664571572876</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="h">
+      <created>1664797915500</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664797915500</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +232,8 @@
     <MESSAGE value="menu, game modes and custom" />
     <MESSAGE value="hi" />
     <MESSAGE value="added clicking on numbers to dig surroundings" />
-    <option name="LAST_COMMIT_MESSAGE" value="added clicking on numbers to dig surroundings" />
+    <MESSAGE value="h" />
+    <option name="LAST_COMMIT_MESSAGE" value="h" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
