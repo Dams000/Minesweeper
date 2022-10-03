@@ -24,7 +24,7 @@ public class StartUpForm extends JFrame {
         JPanel contentPane = new JPanel();
         setContentPane(contentPane);
         contentPane.setLayout(null);
-        contentPane.setBackground(Color.GRAY);
+        contentPane.setBackground(Color.BLACK);
 
         JButton startBtnEasy = new JButton("Easy");
         startBtnEasy.addActionListener(e -> {

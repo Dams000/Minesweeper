@@ -16,7 +16,7 @@ public class Minesweeper {
         gf.setVisible(true);
     }
     public static void startHard() {
-        gf = new GameForm(35, 35, 120);
+        gf = new GameForm(35, 35, 175);
         gf.setVisible(true);
     }
 
